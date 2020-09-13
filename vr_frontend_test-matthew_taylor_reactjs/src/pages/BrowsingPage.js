@@ -2,12 +2,10 @@ import React from 'react'
 
 import Header from '../components/Header'
 
-function BrowsingPage (props) {
-  return (
-    <div>
-      <Header />
-    </div>
-  )
+class BrowsingPage extends React.Component {
+  render () {
+    return <div>BrowsingPage</div>
+  }
 }
 
 export default BrowsingPage

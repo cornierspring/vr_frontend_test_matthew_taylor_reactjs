@@ -1,6 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import Container from 'react-bootsrap/Container'
+import Container from 'react-bootstrap/Container'
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
 
 import BrowsingPage from '../pages/BrowsingPage'
 import ShoppingCartPage from '../pages/ShoppingCartPage'
@@ -44,13 +46,14 @@ class Header extends React.Component {
 
           <Route
             path='/'
-            exact
-            render={() => <BrowsingPage title={this.state.home.title} />}
+            render={() => <BrowsingPage title={this.state.browse.title} />}
           />
 
           <Route
             path='/shoppingCart'
-            render={() => <ShoppingCartPage title={this.state.about.title} />}
+            render={() => (
+              <ShoppingCartPage title={this.state.shoppingCart.title} />
+            )}
           />
         </Container>
       </Router>
