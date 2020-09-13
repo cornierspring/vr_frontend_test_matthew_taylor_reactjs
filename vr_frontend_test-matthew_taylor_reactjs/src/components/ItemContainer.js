@@ -1,52 +1,59 @@
 import React from 'react'
 
-import axe from '../assets/axe'
-import bandsaw from '../assets/bandsaw'
-import chisel from '../assets/chisel'
-import hacksaw from '../assets/hacksaw'
-import sledgehammer from '../assets/sledgehammer'
+import axe from '../assets/axe.png'
+import bandsaw from '../assets/bandsaw.png'
+import chisel from '../assets/chisel.png'
+import hacksaw from '../assets/hacksaw.png'
+import sledgehammer from '../assets/sledgehammer.png'
 
 class ItemContainter extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      items: [
+      products: [
         {
           id: bandsaw,
           title: 'Bandsaw',
-          price: 562.14,
-          imgSrc: axe,
-          selected: false
+          imgSrc: bandsaw
         },
         {
           id: axe,
           title: 'Axe',
-          price: 190.51,
-          imgSrc: axe,
-          selected: false
+
+          imgSrc: axe
         },
         {
-          id: axe,
-          title: 'Axe',
-          price: 190.51,
-          imgSrc: axe,
-          selected: false
+          id: sledgehammer,
+          title: 'Sledgehammer',
+
+          imgSrc: sledgehammer
         },
         {
-          id: axe,
-          title: 'Axe',
-          price: 190.51,
-          imgSrc: axe,
-          selected: false
+          id: chisel,
+          title: 'Chisel',
+
+          imgSrc: chisel
         },
         {
-          id: axe,
-          title: 'Axe',
-          price: 190.51,
-          imgSrc: axe,
-          selected: false
+          id: hacksaw,
+          title: 'Hacksaw',
+
+          imgSrc: hacksaw
         }
       ]
     }
   }
+
+  displayProducts = products => {
+    return products.map(product => {
+      return (
+        <div>
+          <img src={products.imageSrc} />
+          {products.tilte}
+        </div>
+      )
+    })
+  }
 }
+
+export default ItemContainter
